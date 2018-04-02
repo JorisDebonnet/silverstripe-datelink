@@ -1,13 +1,13 @@
 ---
 Name: datelinkrequirements
 ---
-SiteTree:
+SilverStripe\CMS\Model\SiteTree:
   extensions:
-    - DateLinkExtension
+    - TractorCow\DateLink\Extension\DateLinkExtension
 ---
 Name: datelinkconfig
 ---
-DateLink:
+TractorCow\DateLink\DateLink:
 # Specifies the list of child classes.
 # If blank, all pages of holder_classes will be routed.
   child_classes: []
@@ -29,7 +29,7 @@ DateLink:
   url_pattern: '$ParentLink!/$Year!/$Month!/$URLSegment!//$Action/$ID/$OtherID'
 # Class name to use for implementation of the controller class that will handle all routed requests.
 # Should be a subclass of Controller
-  controller: 'DateLinkController'
+  controller: 'TractorCow\DateLink\Routing\DateLinkController'
 # Filename used to store routing table
 # This is required as database access is not accessible during routing, so these tables must be
 # built during dev/build and read during page init. This will be placed under /assets

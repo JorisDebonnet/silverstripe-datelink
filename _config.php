@@ -1,4 +1,4 @@
 <?php
 
 // Forces registration of all pre-calculated routes
-DateLink::register_routes();
+\TractorCow\DateLink\DateLink::register_routes();

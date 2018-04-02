@@ -11,7 +11,7 @@ http://www.mysite.com/blog/heres-an-awesome-post
 
 You could turn these links into:
 
-http://www.mysite.com/blog/2012/2/heres-an-awesome-post
+http://www.mysite.com/blog/2018/2/heres-an-awesome-post
 
 Dated style urls can only be applied to subpages, grouped under common holder pages of a list of specified types.
 
@@ -21,14 +21,14 @@ Dated style urls can only be applied to subpages, grouped under common holder pa
 
 ## Requirements
 
- * SilverStripe 3.1
+ * SilverStripe 4
 
 ## Installation Instructions
 
- * Extract all files into the 'datelink' folder under your Silverstripe root, or install using composer
+ * Install using composer:
 
 ```bash
-composer require "tractorcow/silverstripe-datelink": "3.1.*@dev"
+composer require "tractorcow/silverstripe-datelink": "4.x-dev"
 ```
 
  * Ensure that the assets folder is properly writable. This module will save an xml file under assets/_datelink and will

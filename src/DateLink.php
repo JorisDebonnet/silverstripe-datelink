@@ -1,14 +1,20 @@
 <?php
 
+namespace TractorCow\DateLink;
+
+use SilverStripe\Core\Config\Configurable;
+use TractorCow\DateLink\Routing\DateLinkRouter;
+
 /**
- * Configuration class for the datelink module 
+ * Configuration class for the datelink module
  * Provides a static wrapper to the module route handler instance
- * 
+ *
  * @package datelink
  * @author Damian Mooyman
  */
-class DateLink extends Object
+class DateLink
 {
+    use Configurable;
 
     /**
      * Instance of date link router to use
@@ -47,7 +53,7 @@ class DateLink extends Object
     {
         self::instance()->RefreshCache();
     }
-    
+
     public static function register_routes()
     {
         self::instance()->RegisterRoutes();

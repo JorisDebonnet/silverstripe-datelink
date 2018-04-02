@@ -1,7 +1,7 @@
 {
 	"name": "tractorcow/silverstripe-datelink",
-	"description": "Allows you to add wordpress style year/month URLs to time-sensitive sections of your website",
-	"type": "silverstripe-module",
+	"description": "Allows you to add year/month prefixes to the paths inside time-sensitive sections of your website",
+	"type": "silverstripe-vendormodule",
 	"keywords": ["silverstripe", "url", "date"],
 	"license": "BSD-3-Clause",
 	"authors": [
@@ -14,10 +14,16 @@
 		"issues": "http://github.com/tractorcow/silverstripe-datelink/issues"
 	},
 	"require": {	
-		"silverstripe/framework": ">=3.1",
-		"composer/installers": "*"
+		"silverstripe/framework": ">4"
 	},
 	"extra": {
-		"installer-name": "datelink"
+		"branch-alias": {
+			"dev-master": "4.x-dev"
+		}
+	},
+	"autoload": {
+		"psr-4": {
+			"TractorCow\\DateLink\\": "src/"
+		}
 	}
 }
